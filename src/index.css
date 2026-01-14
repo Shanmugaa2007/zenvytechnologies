@@ -1239,7 +1239,7 @@ color: #9e38f8;
     overflow-y: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    height: 50vh;
+    height: 30vh;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 15px 30px rgba(147, 51, 234, 0.25);
