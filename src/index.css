@@ -1228,7 +1228,7 @@ color: #9e38f8;
   .wrapper {
     width: 100%;
     padding: 0px 4%;
-    transform: translateY(-200px); 
+    transform: translateY(-180px); 
     background: #ffffff;
   }
 
@@ -1246,13 +1246,13 @@ color: #9e38f8;
   }
 
   .grids {
-    min-width: 180px;
+    min-width: 160px;
     padding: 8px 10px 0px;
     flex-shrink: 0;
   }
 
   .image-box {
-    height: 130px;
+    height: 150px;
     margin-bottom: 4px;
   }
 
