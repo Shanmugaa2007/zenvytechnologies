@@ -1246,13 +1246,13 @@ color: #9e38f8;
   }
 
   .grids {
-    min-width: 200px;
+    min-width: 180px;
     padding: 8px 10px 0px;
     flex-shrink: 0;
   }
 
   .image-box {
-    height: 120px;
+    height: 130px;
     margin-bottom: 4px;
   }
 
