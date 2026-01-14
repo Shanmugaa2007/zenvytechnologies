@@ -13,7 +13,7 @@ function Services() {
       .then((res) => res.json())
       .then((data) => {
         setListofServices(data);
-        setLoading(false); // ✅ only after data is fetched
+        setLoading(false);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -35,22 +35,31 @@ function Services() {
     scrollRef.current.scrollBy({ left: 240, behavior: "smooth" });
   };
 
-
+  
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
 
     let autoScroll = null;
+    let direction = 1; 
 
     const startAutoScroll = () => {
-      stopAutoScroll(); 
+      stopAutoScroll();
       autoScroll = setInterval(() => {
         const maxScrollLeft = container.scrollWidth - container.clientWidth;
 
-        if (container.scrollLeft >= maxScrollLeft) {
-          container.scrollTo({ left: 0, behavior: "smooth" });
+        if (direction === 1) {
+          if (container.scrollLeft >= maxScrollLeft) {
+            direction = -1;
+          } else {
+            container.scrollBy({ left: 240, behavior: "smooth" });
+          }
         } else {
-          container.scrollBy({ left: 240, behavior: "smooth" });
+          if (container.scrollLeft <= 0) {
+            direction = 1;
+          } else {
+            container.scrollBy({ left: -240, behavior: "smooth" });
+          }
         }
       }, 2500);
     };

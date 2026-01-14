@@ -1225,35 +1225,69 @@ color: #9e38f8;
     display: none;
   }
   .wrapper {
-    width: 100%;
-    padding: 0px 4%;
-    transform: translateY(-100px); 
-    background: #ffffff;
+  width: 100%;
+  padding: 0px 8%; /* lite perusa width */
+  transform: translateY(-120px);
+  background: linear-gradient(135deg, #ac79db, #9f5bdf); /* purple gradient */
+  border-radius: 30px;
+}
+
+.grid-position {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  background: #fff; /* white background inside cards area */
+  padding: 30px;
+  border-radius: 26px;
+  box-shadow: 0 25px 50px rgba(147, 51, 234, 0.35);
+}
+
+.grid-position::-webkit-scrollbar {
+  display: none;
+}
+
+.grids {
+  min-width: 190px;
+  max-width: min-content;
+  padding: 10px 14px 0px;
+  flex-shrink: 0;
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+.image-box {
+  height: 110px;
+  margin-bottom: 2px;
+}
+
+.grids h3 {
+  font-size: 1rem;
+}
+
+.grids p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+  .wrapper {
+    padding: 0px 5%;
+    transform: translateY(-80px);
   }
 
   .grid-position {
-    display: flex;
     gap: 16px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    background: linear-gradient(135deg, #ac79db, #9f5bdf);
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(147, 51, 234, 0.25);
   }
 
   .grids {
-    min-width: 160px; 
-    max-width: min-content;
-    padding: 8px 10px 0px;
-    flex-shrink: 0;
+    min-width: 160px;
   }
 
   .image-box {
     height: 90px;
-    margin-bottom: 4px;
   }
 
   .grids h3 {
@@ -1262,12 +1296,6 @@ color: #9e38f8;
 
   .grids p {
     font-size: 0.8rem;
-    line-height: 1.4;
-  }
-
-  .loader {
-    width: 50px;
-    aspect-ratio: 1;
   }
 
 .cardss{
