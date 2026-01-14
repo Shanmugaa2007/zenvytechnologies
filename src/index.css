@@ -1196,10 +1196,10 @@ color: #9e38f8;
   .homecontainer h1{
     max-width: 50%;
     font-size: 18px;
-    transform: translateY(-60px);
+    transform: translateY(-90px);
   }
   .homecontainer .Tagline{
-    transform: translateY(-140px);
+    transform: translateY(-180px);
     max-width: 50%;
   }
   .aboutus{
