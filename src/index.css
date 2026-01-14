@@ -1203,7 +1203,7 @@ color: #9e38f8;
     max-width: 50%;
   }
   .aboutus{
-    transform: translateY(-210px);
+    transform: translateY(-240px);
   }
   .about-head,.service-h1,.project-head{
   display: inline-block;
@@ -1255,6 +1255,9 @@ color: #9e38f8;
   .grids p {
     font-size: 0.9rem;
     line-height: 1.5;
+  }
+  .wrapper{
+    transform: translateY(-90px);
   }
 .cardss{
   display: block;
