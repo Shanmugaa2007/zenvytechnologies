@@ -1224,33 +1224,38 @@ color: #9e38f8;
   .right-arrow{
     display: none;
   }
-  .wrapper{
+  .wrapper {
     margin-top: 10px;
   }
+
   .grid-position {
-  width: max-content;
-  gap: 45px;
-  padding: 20px;
-  transform: translateX(35px);
-  scroll-behavior: smooth;
+    width: max-content;
+    gap: 45px;
+    padding: 20px;
+    transform: translateX(35px);
+    scroll-behavior: smooth;
   }
+
   .grids {
-  min-width: 190px;
-  max-width: min-content;
-  padding: 10px 14px 0px;
-  flex-shrink: 0;
+    min-width: 190px;
+    max-width: min-content;
+    padding: 10px 14px 0px;
+    flex-shrink: 0;
   }
+
   .image-box {
-  height: 110px;
-  margin-bottom: 2px;
+    height: 110px;
+    margin-bottom: 2px;
   }
+
   .grids h3 {
-  font-size: 1.0rem;
+    font-size: 1.0rem;
   }
+
   .grids p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
 .cardss{
   display: block;
   transform: translateX(75px);
@@ -1557,26 +1562,26 @@ color: #9e38f8;
   font-size: 0.4rem;
 }
   .footer {
-    padding: 40px 30px 25px; /* reduce padding for tablets */
+    padding: 40px 30px 25px; 
   }
 
   .footer-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* two columns */
-    gap: 40px; /* smaller gap than desktop */
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px;
   }
 
   .footer-logo {
     font-size: 26px;
     margin-bottom: 12px;
-    transform: none; /* remove translate for clean alignment */
+    transform: none; 
     text-align: center;
   }
 
   .footer-desc {
     font-size: 14px;
     line-height: 1.5;
-    max-width: 100%; /* allow full width */
+    max-width: 100%; 
     text-align: center;
   }
 
