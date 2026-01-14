@@ -1,6 +1,7 @@
 import AboutUs from "./AboutUs";
 import Contact from "./Contact";
 import FeedbackPage from "./FeedBackPage";
+import Footer from "./Footer";
 import Founders from "./Founders";
 import Home from "./Home";
 import Navbar from "./navbar";
@@ -19,6 +20,7 @@ function UserIndex () {
         <Founders/>
         <FeedbackPage/>
         <Contact/>
+        <Footer/>
         </>
     )
 }

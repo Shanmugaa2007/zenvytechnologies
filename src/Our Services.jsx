@@ -1,23 +1,21 @@
 import { useRef } from "react";
-import { useState,useEffect } from 'react'
-import axios from 'axios'
-
+import { useState,useEffect } from 'react';
 function Services () {
 
   const [ListofServices,setListofServices] = useState([]);
+   const scrollRef = useRef(null);
+
+  const [showLeft, setShowLeft] = useState(false);
+  const [showRight, setShowRight] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(()=>{
 
     fetch('https://zenvytechnologiess.onrender.com/services')
     .then(res=>res.json())
-    .then(data=>setListofServices(data))
+    .then(data=>setListofServices(data),setLoading(false))
     .catch(err=>console.log(err))
-  },[])
-
-  const scrollRef = useRef(null);
-
-  const [showLeft, setShowLeft] = useState(false);
-  const [showRight, setShowRight] = useState(true);
+  },[]);
 
   const handleScroll = () => {
   const container = scrollRef.current;
@@ -114,7 +112,7 @@ useEffect(() => {
               <i className="fa-solid fa-angle-left left-arrow" onClick={scrollLeftFn}></i>
           )}
           <div className="grid-position" ref={scrollRef}   onScroll={handleScroll}>
-              {ListofServices.map((service, index) => (
+             {loading ?  <div className="loader"></div>  : (ListofServices.map((service, index) => (
                 <div className="grids" key={index}>
                   <div className="image-box">
                     <img src={service.image} alt={service.title} />
@@ -122,7 +120,8 @@ useEffect(() => {
                   <h3>{service.title}</h3>
                   <p>{service.desc}</p>
                 </div>
-              ))}
+              )))
+            }
           </div>
           {showRight && (
             <i className="fa-solid fa-angle-right right-arrow" onClick={scrollRightFn}></i>
