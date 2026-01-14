@@ -35,6 +35,7 @@ function Services() {
     scrollRef.current.scrollBy({ left: 240, behavior: "smooth" });
   };
 
+
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
@@ -42,6 +43,7 @@ function Services() {
     let autoScroll = null;
 
     const startAutoScroll = () => {
+      stopAutoScroll(); 
       autoScroll = setInterval(() => {
         const maxScrollLeft = container.scrollWidth - container.clientWidth;
 
@@ -62,7 +64,7 @@ function Services() {
 
     const checkScreen = () => {
       const width = window.innerWidth;
-      if (width >= 320 && width <= 426) {
+      if (width <= 426) {
         startAutoScroll();
       } else {
         stopAutoScroll();
