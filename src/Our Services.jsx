@@ -6,7 +6,6 @@ function Services() {
 
   const scrollRef = useRef(null);
 
-  // fetch services
   useEffect(() => {
     fetch("https://zenvytechnologiess.onrender.com/services")
       .then((res) => res.json())
@@ -20,33 +19,29 @@ function Services() {
       });
   }, []);
 
-  // INFINITE AUTO SCROLL (LEFT ↔ RIGHT)
   useEffect(() => {
     const container = scrollRef.current;
     if (!container || ListofServices.length === 0) return;
 
-    // start from center (because we duplicate data)
     const singleSetWidth = container.scrollWidth / 3;
     container.scrollLeft = singleSetWidth;
 
     let autoScroll = null;
-    const speed = 1; // smooth speed
+    const speed = 1; 
 
     const startAutoScroll = () => {
       stopAutoScroll();
       autoScroll = setInterval(() => {
         container.scrollLeft += speed;
 
-        // right end → jump to middle
         if (container.scrollLeft >= singleSetWidth * 2) {
           container.scrollLeft = singleSetWidth;
         }
 
-        // left end → jump to middle
         if (container.scrollLeft <= 0) {
           container.scrollLeft = singleSetWidth;
         }
-      }, 16); // ~60fps
+      }, 16); 
     };
 
     const stopAutoScroll = () => {
@@ -73,7 +68,6 @@ function Services() {
     };
   }, [ListofServices]);
 
-  // duplicate data for seamless infinite scroll
   const services = [...ListofServices, ...ListofServices, ...ListofServices];
 
   return (

@@ -1234,26 +1234,25 @@ color: #9e38f8;
 
   .grid-position {
     display: flex;
-    gap: 16px; /* tighter gap for mobile */
+    gap: 16px;
     overflow-x: auto;
     overflow-y: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    background: linear-gradient(135deg, #ac79db, #9f5bdf);
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 15px 30px rgba(147, 51, 234, 0.25);
   }
 
   .grids {
-    min-width: 160px; /* smaller card width */
+    min-width: 200px;
     max-width: min-content;
     padding: 8px 10px 0px;
     flex-shrink: 0;
   }
 
   .image-box {
-    height: 90px; /* reduce image height */
+    height: 100px;
     margin-bottom: 4px;
   }
 
