@@ -16,13 +16,15 @@ function Contact() {
     e.preventDefault();
 
     try {
-      const res = await axios.post('https://zenvytechnologiess.onrender.com/mail', {
-        name,
-        email,
-        message
-      });
+      const res = await axios.post('https://zenvytechnologiess.onrender.com/mail',
+        { name, email, message },
+        {
+          withCredentials: true
+        }
+        );
 
-      if (res.data.success) {
+
+      if (res.data?.success) {
         alert("Message sent successfully!");      
         setName("");                              
         setEmail("");                              
