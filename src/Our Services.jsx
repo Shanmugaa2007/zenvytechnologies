@@ -27,7 +27,7 @@ function Services() {
     container.scrollLeft = singleSetWidth;
 
     let autoScroll = null;
-    const speed = 1; 
+    const speed = 0.7; 
 
     const startAutoScroll = () => {
       stopAutoScroll();
@@ -52,7 +52,7 @@ function Services() {
     };
 
     const checkScreen = () => {
-      if (window.innerWidth <= 426) {
+      if (window.innerWidth <= 2560) {
         startAutoScroll();
       } else {
         stopAutoScroll();
@@ -68,7 +68,7 @@ function Services() {
     };
   }, [ListofServices]);
 
-  const services = [...ListofServices, ...ListofServices, ...ListofServices];
+  const services = [...ListofServices, ...ListofServices, ...ListofServices,...ListofServices];
 
   return (
     <div className="wrapper" id="service">

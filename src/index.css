@@ -285,6 +285,7 @@ html, body {
   padding: 5px;
    cursor: pointer;
   z-index: 5;
+  transform: translate(40px,-80px);
 }
 
 .grids {
