@@ -47,24 +47,16 @@ function Services() {
       }
     };
 
-    // 🖥️ Desktop hover pause
+    // 🖥️ Desktop ONLY – hover pause
     container.addEventListener("mouseenter", stopAutoScroll);
     container.addEventListener("mouseleave", startAutoScroll);
 
-    // 📱 Mobile touch pause
-    container.addEventListener("touchstart", stopAutoScroll);
-    container.addEventListener("touchend", startAutoScroll);
-
-    // Start auto scroll initially
     startAutoScroll();
 
     return () => {
       stopAutoScroll();
-
       container.removeEventListener("mouseenter", stopAutoScroll);
       container.removeEventListener("mouseleave", startAutoScroll);
-      container.removeEventListener("touchstart", stopAutoScroll);
-      container.removeEventListener("touchend", startAutoScroll);
     };
   }, [ListofServices]);
 
