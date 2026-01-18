@@ -5,6 +5,7 @@ function Services() {
   const [loading, setLoading] = useState(true);
 
   const scrollRef = useRef(null);
+  const autoScrollRef = useRef(null);
 
   useEffect(() => {
     fetch("https://zenvytechnologiess.onrender.com/services")
@@ -23,52 +24,56 @@ function Services() {
     const container = scrollRef.current;
     if (!container || ListofServices.length === 0) return;
 
-    const singleSetWidth = container.scrollWidth / 3;
+    const singleSetWidth = container.scrollWidth / 4;
     container.scrollLeft = singleSetWidth;
 
-    let autoScroll = null;
-    const speed = 0.7; 
+    const speed = 0.7;
 
     const startAutoScroll = () => {
       stopAutoScroll();
-      autoScroll = setInterval(() => {
+      autoScrollRef.current = setInterval(() => {
         container.scrollLeft += speed;
 
         if (container.scrollLeft >= singleSetWidth * 2) {
           container.scrollLeft = singleSetWidth;
         }
-
-        if (container.scrollLeft <= 0) {
-          container.scrollLeft = singleSetWidth;
-        }
-      }, 16); 
+      }, 16);
     };
 
     const stopAutoScroll = () => {
-      if (autoScroll) {
-        clearInterval(autoScroll);
-        autoScroll = null;
+      if (autoScrollRef.current) {
+        clearInterval(autoScrollRef.current);
+        autoScrollRef.current = null;
       }
     };
 
-    const checkScreen = () => {
-      if (window.innerWidth <= 2560) {
-        startAutoScroll();
-      } else {
-        stopAutoScroll();
-      }
-    };
+    // 🖥️ Desktop hover pause
+    container.addEventListener("mouseenter", stopAutoScroll);
+    container.addEventListener("mouseleave", startAutoScroll);
 
-    checkScreen();
-    window.addEventListener("resize", checkScreen);
+    // 📱 Mobile touch pause
+    container.addEventListener("touchstart", stopAutoScroll);
+    container.addEventListener("touchend", startAutoScroll);
+
+    // Start auto scroll initially
+    startAutoScroll();
 
     return () => {
       stopAutoScroll();
-      window.removeEventListener("resize", checkScreen);
+
+      container.removeEventListener("mouseenter", stopAutoScroll);
+      container.removeEventListener("mouseleave", startAutoScroll);
+      container.removeEventListener("touchstart", stopAutoScroll);
+      container.removeEventListener("touchend", startAutoScroll);
     };
   }, [ListofServices]);
 
-  const services = [...ListofServices, ...ListofServices, ...ListofServices,...ListofServices];
+  const services = [
+    ...ListofServices,
+    ...ListofServices,
+    ...ListofServices,
+    ...ListofServices,
+  ];
 
   return (
     <div className="wrapper" id="service">
