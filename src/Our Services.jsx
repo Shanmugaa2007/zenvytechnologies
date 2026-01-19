@@ -47,7 +47,6 @@ function Services() {
       }
     };
 
-    // 🖥️ Desktop ONLY – hover pause
     container.addEventListener("mouseenter", stopAutoScroll);
     container.addEventListener("mouseleave", startAutoScroll);
 
