@@ -60,10 +60,7 @@ function Services() {
   }, [ListofServices]);
 
   const services = [
-    ...ListofServices,
-    ...ListofServices,
-    ...ListofServices,
-    ...ListofServices,
+    ...ListofServices
   ];
 
   return (
