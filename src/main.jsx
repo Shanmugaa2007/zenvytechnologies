@@ -8,7 +8,8 @@ import StudentRegister from './StudentRegistration'
 import UserRegistration from './otherUsersregistration'
 import Login from './Login'
 import PrivacyPolicy from './privacypolicy'
-import React from 'react';
+import OfferLetter from './offerletter'
+
 
 
 const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
   {
     path: 'privacypolicy',
     element: <PrivacyPolicy/>
+  },
+  {
+    path:'offerletter',
+    element:<OfferLetter/>
   }
 ]);
 

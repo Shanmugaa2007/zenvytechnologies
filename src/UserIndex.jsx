@@ -7,7 +7,6 @@ import Home from "./Home";
 import Navbar from "./navbar";
 import Services from "./Our Services";
 import ProjectsStats from "./Projects";
-import React from 'react';
 
 function UserIndex () {
     return (
