@@ -241,7 +241,7 @@ html, body {
 }
 .grid-position 
 .loader {
-  width: 70px;
+  width: 50px;
   aspect-ratio: 1;
   background:
     radial-gradient(farthest-side,#a616ff 90%,#0000) center/16px 16px,
