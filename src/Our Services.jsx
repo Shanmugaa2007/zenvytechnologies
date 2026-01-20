@@ -27,7 +27,7 @@ function Services() {
     const singleSetWidth = container.scrollWidth / 4;
     container.scrollLeft = singleSetWidth;
 
-    const speed = 1.2;
+    const speed = 0.9;
 
     const startAutoScroll = () => {
       stopAutoScroll();
