@@ -9,6 +9,7 @@ import UserRegistration from './otherUsersregistration'
 import Login from './Login'
 import PrivacyPolicy from './privacypolicy'
 import OfferLetter from './offerletter'
+import Certificate from './InternCertificate'
 
 
 
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
   {
     path:'offerletter',
     element:<OfferLetter/>
+  },
+  {
+    path:'certificate',
+    element:<Certificate/>
   }
 ]);
 

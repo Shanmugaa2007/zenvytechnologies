@@ -1247,11 +1247,10 @@ color: #9e38f8;
 }
 
 
-
 /*Device Responsive*/
 
 /* Mobile Responsive*/
-@media (min-width: 320px) and (max-width: 426px) {
+@media (min-width: 320px) and (max-width: 500px) {
   .nav-links {
     display: flex;
     background-color: #c77dff;
