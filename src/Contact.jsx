@@ -65,7 +65,7 @@ function Contact() {
             onChange={e => setMessage(e.target.value)} 
             required
           ></textarea>
-          <button className="form-btn" style={{width:"75%"}}>Send Message</button>
+          <button className="form-btn" style={{width:"75%", fontFamily:"sans-serif"}}>Send Message</button>
         </form>
 
         <div className="our-details">

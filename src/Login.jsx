@@ -36,7 +36,7 @@ const Login = () => {
       .then((res) => {
         if (res.data.success) {
           alert("Login Successful");
-          navigate("/gotoregister"); 
+          navigate("/"); 
         } else {
           alert(res.data.message || "Login failed");
         }

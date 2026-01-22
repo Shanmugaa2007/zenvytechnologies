@@ -2071,21 +2071,22 @@ color: #9e38f8;
   font-family: sans-serif;
 }
   .navbar {
-  height: 40%;
+  height: max-content;
 }
 
 .logo {
-  max-width: 45%;
-  transform: translateX(-650px);
+  min-width: 40%;
+  transform: translateX(-660px);
 }
 
 .nav-links,.linkss { 
-  gap: 34px;
+  gap: 40px;
   padding-left: 10%;
 }
 
 .nav-links,.linkss li .navigate {
-  font-size: 40px;
+  font-size: 48px;
+  font-family: sans-serif;
 }
 
 .buttons{
@@ -2099,9 +2100,10 @@ color: #9e38f8;
   padding: 20px 32px;
   font-size: 36px;
   font-weight: 800;
+  border-radius: 20px;
 }
 .get-started-btn{
-  transform: translateX(500px);
+  transform: translateX(450px);
 }
 .get-started-btn:hover{
   transform: translate(480px,-3px);
@@ -2113,73 +2115,57 @@ color: #9e38f8;
   height: max-content;
 }
 .homecontainer img {
-  height: 90%;
+  height: 80vh;
 }
 
 .homecontainer h1{
-  font-size: 6.5rem;
-  min-width: 900px;
+  font-size: 7.5rem;
+  min-width: 1000px;
 }
 
 .Tagline {
-  top: 45%;
+  top: 55%;
 }
 
 .Tagline strong,
 .Tagline p {
-  font-size: clamp(8px, 2vw, 36px);
+  font-size: clamp(40px, 4vw, 38px);
 }
 
 .aboutus{
-  margin-top: 3%;
+  margin-top: 4%;
 }
 
 .about-head,.service-h1,.project-head{
-  padding: 20px 48px;
+  padding: 25px 48px;
   font-size: 3.5rem;
   font-weight: 700;
   letter-spacing: 2px;
 }
-.about-pdiv {
-  transform: translateY(-55px);
-}
 
 .para {
-  font-size: 2.5rem;
+  padding: 2% 5%;
+  font-size: 3rem;
   line-height: 2.3;
+  font-family: sans-serif;
 }
 
 
 .grid-position {
-  gap: 34px;
-}
-.left-arrow{
-  transform: translate(-320px,260px);
-  font-size: 28px;
-  background-color: rgb(224, 220, 220,0.8);
-  border-radius: 50%;
-  padding: 5px;
-   cursor: pointer;
-  z-index: 5;
-}
-.right-arrow{
-  font-size: 28px;
-  background-color: rgb(224, 220, 220,0.8);
-  border-radius: 50%;
-  padding: 5px;
-   cursor: pointer;
-  z-index: 5;
+  gap: 44px;
 }
 
 .grids {
   min-width: 640px;
   max-width: 640px;
-  min-height: 55vh;
+  min-height: 60vh;
   padding: 30px;
+  border-radius: 5%;
 }
 
 .image-box {
-  height: 530px;
+  border-radius: 5%;
+  height: 400px;
   margin-bottom: 38px;
 }
 
@@ -2189,9 +2175,9 @@ color: #9e38f8;
 }
 
 .grids p {
-  font-size: 2.3rem;
-  font-family: monospace;
-  font-weight: 550;
+  font-size: 2.5rem;
+  font-family: sans-serif;
+  font-weight: 500;
 }
 
 .stat-card {    
@@ -2200,12 +2186,14 @@ color: #9e38f8;
 }
 
 .stat-card h2 {
+  font-family: sans-serif;
   font-size: 5.6rem;
   margin-bottom: 20px;
 }
 .stat-card p {
-  font-size: 2.5rem;
-  font-weight: 550;
+  font-family: sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
 }
 .form-head h1 {
   font-size: 5.6rem;
@@ -2254,29 +2242,22 @@ color: #9e38f8;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 28px;
+  gap: 8px;
   box-shadow: 0 15px 35px rgba(106, 27, 154, 0.4);
   padding: 5px;
   align-items: center;
 }
 
 .our-details p {
+  font-family: sans-serif;
   font-size: 3rem;
   font-weight: 500;
-  letter-spacing: 0.4px;
-}
-.left-arrow{
-  font-size: 68px;
-  transform: translate(-450px,650px);
-}
-.right-arrow{
-  font-size: 68px;
-  transform: translate(2100px,-480px);
 }
 .our-details{
   margin-top: 25px;
 }
 .our-details h1{
+  font-family: sans-serif;
   padding: 0px 50px;
   font-size: 4rem;
 }
@@ -2286,12 +2267,12 @@ color: #9e38f8;
 .email-icon{
   width: 40px;
   height: 40px;
-  transform: translate(-255px,100px);
+  transform: translate(-255px,95px);
 }
 .cl-icon{
   width: 50px;
   height: 50px;
-  transform: translate(-160px,110px);
+  transform: translate(-140px,105px);
 }
 .wp-icon {
   width: 50px;
@@ -2301,12 +2282,13 @@ color: #9e38f8;
 .insta-icon{
   width: 60px;
   height: 60px;
-  transform: translate(-210px,115px);
+  transform: translate(-210px,105px);
 }
 .link-icon {
-  width: 60px;
+  border-radius: 5px;
+  width: 55px;
   height: 60px;
-  transform: translate(-85px,115px);
+  transform: translate(-85px,105px);
 }
 .founder-card {
   width: 550px;
@@ -2335,29 +2317,33 @@ color: #9e38f8;
 
 .feedback-container h2 {
   margin-bottom: 40px;
-  font-size: 64px;
+  font-size: 68px;
 }
 
 .feedback-form {
-  gap: 42px;
+  gap: 44px;
 }
 
 
 .feedback-form input,
 .feedback-form select,
 .feedback-form textarea {
+  font-family: sans-serif;
   padding: 21px 34px;
-  font-size: 20px;
+  font-size: 38px;
 }
 
+.feedback-form option{
+  font-size: 16px;
+}
 
 .feedback-form textarea {
   resize: none;
-  min-height: 180px;
+  min-height: 280px;
 }
 
 .feedback-form button {
-  font-size: 35px;
+  font-size: 45px;
 }
 
 .review-section h2 {
@@ -2423,18 +2409,11 @@ color: #9e38f8;
 }
 
 
-* {
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
-
-/* Login Card */
 .login-form {
   width: 980px;
   padding: 55px;
 }
 
-/* Heading */
 .login-form h2 {
   font-size: 68px;
   margin-bottom: 8px;
@@ -2445,20 +2424,17 @@ color: #9e38f8;
   margin-bottom: 30px;
 }
 
-/* Inputs */
 .login-form input {
   padding: 22px;
   margin-bottom: 38px;
   font-size: 32px;
 }
 
-/* Button */
 .login-form button {
   padding: 18px;
   font-size: 32px;
 }
 
-/* Register Text */
 .register-text {
   font-size: 28px;
 }
@@ -2497,6 +2473,10 @@ color: #9e38f8;
     font-size: 74px;
     margin-bottom: 30px;
   }
+  .footer-section p{
+    letter-spacing: 2px;
+    transform: translateX(-55px);
+  }
 
   .footer-section p,
   .footer-section ul li {
@@ -2504,8 +2484,8 @@ color: #9e38f8;
   }
 
   .footer-social {
-    gap: 40px;
-    margin-left: 55px;
+    gap: 34px;
+    margin-left: 45px;
   }
 
   .social-icon {
