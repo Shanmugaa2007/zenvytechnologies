@@ -10,6 +10,7 @@ import Login from './Login'
 import PrivacyPolicy from './privacypolicy'
 import OfferLetter from './offerletter'
 import Certificate from './InternCertificate'
+import ProtectedRoute from './logout'
 
 
 
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
   {
     path:'certificate',
     element:<Certificate/>
+  },
+  {
+    path:'logout',
+    element:<ProtectedRoute/>
   }
 ]);
 
