@@ -17,7 +17,7 @@ function FeedbackList({ feedbacks }) {
   if (filteredReviews.length === 0) return null;
 
   return (
-    <div className="review-section">
+    <div className="review-section" id="review">
       <h2>User Reviews</h2>
 
       <div className="review-grid">
