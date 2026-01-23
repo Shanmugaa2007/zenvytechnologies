@@ -1351,6 +1351,11 @@ color: #9e38f8;
     padding-top: 8px;
     padding-bottom: 7px;
   }
+  .nav-links li .navigate:last-child{
+    padding-right: 270px;
+    padding-top: 7px;
+    padding-bottom: 6px;
+  }
   .homecontainer img{
     height: 35vh;
   }
