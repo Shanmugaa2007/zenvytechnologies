@@ -1646,6 +1646,13 @@ color: #9e38f8;
   .service-footer {
     margin-left: 0;
   }
+   .up-arrow {
+  font-size: 18px;
+}
+.arrow-div{
+  width: 50px;
+  height: 50px;
+}
 }
 
 
