@@ -1,4 +1,5 @@
 import AboutUs from "./AboutUs";
+import BackToHome from "./backtohome";
 import Contact from "./Contact";
 import FeedbackPage from "./FeedBackPage";
 import Footer from "./Footer";
@@ -20,6 +21,7 @@ function UserIndex () {
         <FeedbackPage/>
         <Contact/>
         <Footer/>
+        <BackToHome/>
         </>
     )
 }
