@@ -1346,6 +1346,10 @@ color: #9e38f8;
     font-family: sans-serif;
     font-size: 14px;
     font-weight: 300;
+    border: 0px solid #000;
+    padding-right: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .homecontainer img{
     height: 35vh;
