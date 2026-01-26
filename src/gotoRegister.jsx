@@ -85,7 +85,7 @@ function GotoRegister() {
               </Link>
 
               <Link className="link-option" to="userregister">
-                Other's Registration
+                Other Registration
               </Link>
 
               <Link className="link-option" to="/">
