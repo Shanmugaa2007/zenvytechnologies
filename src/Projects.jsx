@@ -2,7 +2,7 @@ function ProjectsStats () {
 
    const details = [
   {
-    count: 1,
+    count: 2,
     desc: "Projects Completed",
   },
   {
@@ -10,7 +10,7 @@ function ProjectsStats () {
     desc: "Happy Clients",
   },
   {
-    count: 2,
+    count: 1,
     desc: "Ongoing Projects",
   },
   {
