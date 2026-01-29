@@ -6,7 +6,7 @@ function ProjectsStats () {
     desc: "Projects Completed",
   },
   {
-    count: 1,
+    count: 2,
     desc: "Happy Clients",
   },
   {
