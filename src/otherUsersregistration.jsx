@@ -12,6 +12,7 @@ function UserRegistration () {
 
 
     const [name,setName] = useState("");
+    const [username,setUsername] = useState("");
     const [email,setEmail] = useState("");
     const [phone,setPhone] = useState("");
     const [profession,setProfession] = useState("");
@@ -29,7 +30,7 @@ function UserRegistration () {
         }
 
       axios.post('https://zenvytechnologiess.onrender.com/otherregister',{
-        name:name,email:email,phone:phone,profession:profession,organization:organization,password:cn_password
+        name:name,username:username,email:email,phone:phone,profession:profession,organization:organization,password:cn_password
       });
       alert("Register Successfully")
     }
@@ -43,6 +44,7 @@ function UserRegistration () {
           <p className="subtitle">Create your account to access our services</p>
 
           <input type="text" placeholder="Full Name" name="Name" value={name} onChange={(e)=>setName(e.target.value)} required />
+          <input type="text" placeholder="Username for login" name="name" onChange={e=>setUsername(e.target.value)} required />
           <input type="email" placeholder="Email Address" name="Email" value={email} onChange={(e)=> setEmail(e.target.value)} required />
           <input type="tel" placeholder="Mobile Number" name="Phone" value={phone} onChange={(e)=>setPhone(e.target.value)} required />
           <input type="text" placeholder="Profession" name="Profession" value={profession} onChange={(e)=>setProfession(e.target.value)} required />
