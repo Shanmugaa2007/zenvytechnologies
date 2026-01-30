@@ -12,6 +12,7 @@ function StudentRegister  () {
   }
 
       const [name,setName] = useState("");
+      const [username,setUsername] = useState("");
       const [email,setEmail] = useState("");
       const [phone,setPhone] = useState("");
       const [college,setCollege] = useState("");
@@ -29,9 +30,18 @@ function StudentRegister  () {
           return alert("Password Not be Same")
         }
         axios.post('https://zenvytechnologiess.onrender.com/studentregister',{
-          name:name,email:email,phone:phone,college:college,course:course,yearofstudy:yearofstudy,password:cn_password
+          name:name,username:username,email:email,phone:phone,college:college,course:course,yearofstudy:yearofstudy,password:cn_password
         })
         alert("Student Register Successfully");
+        setName("");
+        setUsername("");
+        setEmail("");
+        setPhone("");
+        setCollege("");
+        setCourse("");
+        setYearofstudy("");
+        setC_password("");
+        setCn_password("");
       }
 
 
@@ -44,6 +54,7 @@ function StudentRegister  () {
           <p className="subtitle">Create your account to access our services</p>
 
           <input type="text" placeholder="Full Name" name="name" onChange={e=>setName(e.target.value)} required />
+          <input type="text" placeholder="Username for login" name="name" onChange={e=>setUsername(e.target.value)} required />
           <input type="email" placeholder="Email Address" name="email" onChange={e=>setEmail(e.target.value)} required />
           <input type="tel" placeholder="Mobile Number" name="phone" onChange={e=>setPhone(e.target.value)} required />
 
