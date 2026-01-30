@@ -5,7 +5,7 @@ import axios from "axios";
 const Login = () => {
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const Login = () => {
       .post(
         "https://zenvytechnologiess.onrender.com/login",
         {
-          email,
+          username,
           password,
         },
         { withCredentials: true }
@@ -61,12 +61,12 @@ const Login = () => {
         <p className="subtitle">Welcome back to Zenvy Technologies</p>
 
         <input
-          type="email"
-          name="email"
-          placeholder="Email Address"
-          value={email}
+          type="text"
+          name="username"
+          placeholder="Username"
+          value={username}
           required
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setUsername(e.target.value)}
         />
 
         <input
