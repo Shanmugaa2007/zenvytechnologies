@@ -8,9 +8,11 @@ import StudentRegister from './StudentRegistration'
 import UserRegistration from './otherUsersregistration'
 import Login from './Login'
 import PrivacyPolicy from './privacypolicy'
-import OfferLetter from './offerletter'
 import Certificate from './InternCertificate'
 import ProtectedRoute from './logout'
+import InternIndex from './InternIndex'
+import LearnWithUs from './learnwithus'
+import Dashboard from './InternDashboard'
 
 
 
@@ -49,16 +51,24 @@ const router = createBrowserRouter([
     element: <PrivacyPolicy/>
   },
   {
-    path:'offerletter',
-    element:<OfferLetter/>
-  },
-  {
     path:'certificate',
     element:<Certificate/>
   },
   {
     path:'logout',
     element:<ProtectedRoute/>
+  },
+  {
+    path:'internship',
+    element:<InternIndex/>
+  },
+  {
+    path:'learnwithus',
+    element:<LearnWithUs/>
+  },
+  {
+    path:'dashboard',
+    element:<Dashboard/>
   }
 ]);
 
