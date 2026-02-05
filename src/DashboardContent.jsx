@@ -15,10 +15,11 @@ function DashboardContent() {
   const checkUser = async () => {
     try {
       const res = await axios.get(
-        "https://zenvytechnologiess.onrender.com/current-user"
+        "https://zenvytechnologiess.onrender.com/current-user",
+        { withCredentials: true }
       );
 
-      if (res.data.authenticated) {
+      if (res.data.success) {
         console.log("User:", res.data.user);
         setUserdetials(res.data.user);
       } else {
