@@ -15,7 +15,7 @@ function DashboardContent() {
   const checkUser = async () => {
     try {
       const res = await axios.get(
-        "https://zenvytechnologiess.onrender.com/current-user",
+        "https://zenvytechnologiess.onrender.com/me",
         { withCredentials: true }
       );
 
@@ -113,5 +113,6 @@ function DashboardContent() {
 }
 
 export default DashboardContent;
+
 
 
