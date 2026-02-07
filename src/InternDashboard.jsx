@@ -11,7 +11,7 @@ function Dashboard() {
         const [username,setusername] = useState("");
         const fileInputRef = useRef(null);
 
-        axios.get('https://zenvytechnologiess.onrender.com/me')
+        axios.get('https://zenvytechnologiess.onrender.com/current-user')
         .then((res)=>{
         setusername(res.data.user)
         console.log(username)
@@ -72,5 +72,6 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
 
 
