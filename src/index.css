@@ -3593,17 +3593,11 @@ color: #9e38f8;
 .course-suc p{
   margin-left: 3%;
 }
-/* .invisible{
-  z-index: 1000000;
-  background-color: #a8a8a8;
-  width: 765px;
-  height: 50vh;
-  margin-left: 19.75% ;
-  position: relative;
+.invisible{
+  width: 90%;
+  margin-left: 0% ;
   bottom: 1845px;
-  opacity: 60%;
-  border-radius: 8px;
-} */
+}
 
 .certificate-container{
   z-index: 0;
