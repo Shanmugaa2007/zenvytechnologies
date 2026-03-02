@@ -3581,7 +3581,7 @@ color: #9e38f8;
 .intern-overview-suc,.course-suc{
   margin-left: 5%;
   position: relative;
-  bottom: 155px;
+  bottom: 185px;
 }
 .intern-overview-suc h1,.course-suc h1{
   font-size: 20px;
@@ -3670,7 +3670,7 @@ color: #9e38f8;
   font-weight: 600;
 }
 .hide-certificate{
-  bottom: 615px;
+  bottom: 715px;
 }
 }
 
