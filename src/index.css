@@ -3176,6 +3176,9 @@ color: #9e38f8;
   right: 5%;
   font-size: 20px;
 }
+.mock-content h1 {
+  right: 0%;
+}
 .culture-content h1{
   width: max-content;
   right: 0%;
@@ -3221,8 +3224,8 @@ color: #9e38f8;
 }
 
 .intern-grids{
-  min-width: 265px;
-  max-width: 265px;
+  min-width: 270px;
+  max-width: 270px;
 }
 .intern-grids img {
   width: 100%;
@@ -3240,7 +3243,7 @@ color: #9e38f8;
 }
 .apply{
   margin-left: 3%;
-  font-size: 12px;
+  font-size: 14px;
 }
 .final-intern span{
   position: relative;
