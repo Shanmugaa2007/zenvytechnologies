@@ -3670,7 +3670,8 @@ color: #9e38f8;
   font-weight: 600;
 }
 .hide-certificate{
-  bottom: 890px;
+  bottom: 1090px;
+  width: 90%;
 }
 .print-certificate{
   width: 90%;
