@@ -41,7 +41,7 @@ function Certificate({
   const [certificateNo,setCertificateNo] = useState(numberfun()+count);
 
   return (
-    <div style={{overflowY:'hidden'}}>
+    <div style={{overflowY:'hidden',overflowX:"hidden"}}>
       <div ref={printRef} className="certificate-container">
         <img src={zenCertificate} alt="" />
         <input type="text" className="username" value={name} readOnly />
