@@ -3574,7 +3574,7 @@ color: #9e38f8;
 }
 .con-container{
   left: 15%;
-  bottom: 200px;
+  bottom: 250px;
   font-size: 20px;
   width: 70%;
 }
@@ -3670,7 +3670,8 @@ color: #9e38f8;
   font-weight: 600;
 }
 .hide-certificate{
-  bottom: 715px;
+  bottom: 1000px;
+  color: black;
 }
 }
 
