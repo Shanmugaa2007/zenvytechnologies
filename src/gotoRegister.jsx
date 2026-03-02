@@ -57,7 +57,6 @@ function GotoRegister() {
     <div className="user-type-registration">
       <div className="selection-box">
         <h1>Welcome To Zenvy Technologies</h1>
-
         <div className="selection">
           {isAuthenticated ? (
             <>
