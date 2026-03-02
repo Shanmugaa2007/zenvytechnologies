@@ -3574,14 +3574,14 @@ color: #9e38f8;
 }
 .con-container{
   left: 15%;
-  bottom: 170px;
+  bottom: 200px;
   font-size: 20px;
   width: 70%;
 }
 .intern-overview-suc,.course-suc{
   margin-left: 5%;
   position: relative;
-  bottom: 105px;
+  bottom: 155px;
 }
 .intern-overview-suc h1,.course-suc h1{
   font-size: 20px;
@@ -3593,7 +3593,17 @@ color: #9e38f8;
 .course-suc p{
   margin-left: 3%;
 }
-
+/* .invisible{
+  z-index: 1000000;
+  background-color: #a8a8a8;
+  width: 765px;
+  height: 50vh;
+  margin-left: 19.75% ;
+  position: relative;
+  bottom: 1845px;
+  opacity: 60%;
+  border-radius: 8px;
+} */
 
 .certificate-container{
   z-index: 0;
@@ -3660,7 +3670,7 @@ color: #9e38f8;
   font-weight: 600;
 }
 .hide-certificate{
-  bottom: 548px;
+  bottom: 615px;
 }
 }
 
