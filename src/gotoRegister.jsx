@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 function GotoRegister() {
   const navigate = useNavigate();
-  const [isAuthenticated, setIsAuthenticated] = useState(null); 
+  const [isAuthenticated, setIsAuthenticated] = useState(null);
 
   const checkAuth = async () => {
     try {
@@ -28,11 +28,13 @@ function GotoRegister() {
 
   const handleLogoutClick = async () => {
     try {
-      await axios.get(
+      await axios.post(
         "https://zenvytechnologiess.onrender.com/logout",
+        {},
         { withCredentials: true }
       );
       setIsAuthenticated(false);
+      navigate("/gotoregister");
     } catch (err) {
       console.error("Logout error", err);
     }
@@ -57,7 +59,6 @@ function GotoRegister() {
         <h1>Welcome To Zenvy Technologies</h1>
 
         <div className="selection">
-
           {isAuthenticated ? (
             <>
               <span
@@ -93,7 +94,6 @@ function GotoRegister() {
               </Link>
             </>
           )}
-
         </div>
       </div>
     </div>
