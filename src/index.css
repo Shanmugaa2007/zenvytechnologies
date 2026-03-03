@@ -3594,11 +3594,10 @@ color: #9e38f8;
   margin-left: 3%;
 }
 .invisible{
-  width: 90%;
+  width: 80%;
   height: 20vh;
   margin-left: 0% ;
-  bottom: 2000px;
-  right: 5%;
+  bottom: 1950px;
 }
 
 .certificate-container{
