@@ -4572,3 +4572,17 @@ color: #9e38f8;
     padding-top: 25px;
   }
 }
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .certificate-container, .certificate-container * {
+    visibility: visible;
+  }
+  .certificate-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
