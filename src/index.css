@@ -3605,12 +3605,11 @@ color: #9e38f8;
   z-index: 0;
   position: relative;
   align-items: center;
-  width: 90%;
 }
 .certificate-container img{
   align-items: center;
   width: 100%;
-  height: 50vh;
+  height: 20vh;
 }
 .username{
   z-index: 1000;
