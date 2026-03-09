@@ -8,21 +8,30 @@ import Footer from './Footer.jsx';
 function Dashboard() {
   const [profilePicture, setProfilePicture] = useState(null);
   const [file, setFile] = useState(null);
-  const [username, setusername] = useState("");
+  const [userdetials,setUserdetials] = useState(null)
   const fileInputRef = useRef(null);
 
-  useEffect(() => {
-    axios.get('https://zenvytechnologiess.onrender.com/me', {
-      withCredentials: true
-    })
-    .then((res) => {
-      if (res.data.success) {
-        setusername(res.data.user.username);
+ useEffect(() => {
+    const checkUser = async () => {
+      try {
+        const res = await axios.get(
+          "https://zenvytechnologiess.onrender.com/me",
+          { withCredentials: true }
+        );
+
+        if (res.data.authenticated) {
+          console.log("User:", res.data.user);
+          setUserdetials(res.data.user);
+        } else {
+          setUserdetials(null);
+        }
+      } catch (err) {
+        console.log("No active session");
+        setUserdetials(null);
       }
-    })
-    .catch((err) => {
-      console.error("Error fetching user:", err.response?.data || err.message);
-    });
+    };
+
+    checkUser();
   }, []);
 
   const OnclickUpload = () => {
@@ -70,7 +79,7 @@ function Dashboard() {
 
       <div>
         <span className='hellouser'>Hello,</span>
-        <h1 className='User-name'>Username : {username}</h1>
+        <h1 className='User-name'>{userdetials?.username}</h1>
       </div>
 
       <div>
