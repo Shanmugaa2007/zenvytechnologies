@@ -89,12 +89,12 @@ function DashboardContent() {
                                 <p>Phone Number </p>
                             </div>
                             <div className="uservalue">
-                                <p>- date</p>
-                                <p>- {userdetials?.fullname}</p>
+                                <p>- {userdetials?.createdAt}</p>
+                                <p>- {userdetials?.name}</p>
                                 <p>- -</p>
                                 <p>- {userdetials?.username}</p>
                                 <p>- {userdetials?.email}</p>
-                                <p>- -</p>
+                                <p>- {userdetials?.phone}-</p>
                             </div>
                         </div>
                     </div>
