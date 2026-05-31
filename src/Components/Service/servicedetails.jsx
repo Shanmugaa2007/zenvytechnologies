@@ -4,6 +4,7 @@ import GraphicsDesign from "./graphicsdesign";
 import DigitalMarketing from "./digitalmarketing";
 import PortfolioBuilding from "./portfoliobuilding";
 import ResumeBuilding from "./resumebuilding";
+import UIDesign from "./Ui&Uxdesign";
 
 function ServiceDetails() {
 
@@ -30,6 +31,9 @@ function ServiceDetails() {
 
       {slug === "resume" && (
         <ResumeBuilding/>
+      )}
+      {slug === "Ui&Uxdesign" && (
+        <UIDesign/>
       )}
 
     </div>
