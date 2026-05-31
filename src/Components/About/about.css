@@ -1,0 +1,376 @@
+.about-container{
+  display: flex;
+  flex-direction: row;
+  margin: 3rem;
+  align-items: center;
+  justify-content: space-around;
+  min-height: max-content;
+  gap: 2rem;
+}
+
+.aboutus{
+  max-width: 50%;
+  padding-left: 5%;
+}
+.about-head{
+  color: #9a16ff;
+  text-align: center;
+  position: relative;
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.about-head::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+  width: 80px;
+  height: 3px;
+  border-radius: 20px;
+  background: linear-gradient(90deg,#8B5CF6,#A855F7);
+}
+
+.para{
+  padding: 1.5rem;
+  line-height: 1.7rem;
+  font-size: 1.1rem;
+  font-family: serif;
+}
+
+/* ==========================
+   AI CHIP
+========================== */
+
+.ai-chip {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main AI Chip */
+
+.chip-core {
+  width: 180px;
+  height: 180px;
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b,
+    #111827
+  );
+
+  border: 2px solid rgba(0, 255, 255, 0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow:
+    0 0 20px rgba(0,255,255,.4),
+    0 0 60px rgba(139,92,246,.4);
+
+  animation: chipPulse 3s ease-in-out infinite;
+}
+
+.chip-core span {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+
+  background: linear-gradient(
+    90deg,
+    #00f5ff,
+    #8b5cf6,
+    #ff00ff
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================
+   CIRCUITS
+========================== */
+
+.circuit {
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #00f5ff,
+    #8b5cf6,
+    transparent
+  );
+
+  background-size: 300% 100%;
+  animation: flow 3s linear infinite;
+}
+
+.top {
+  width: 3px;
+  height: 120px;
+  top: 20px;
+}
+
+.bottom {
+  width: 3px;
+  height: 120px;
+  bottom: 20px;
+}
+
+.left {
+  width: 120px;
+  height: 3px;
+  left: 20px;
+}
+
+.right {
+  width: 120px;
+  height: 3px;
+  right: 20px;
+}
+
+/* ==========================
+   DATA NODES
+========================== */
+
+.dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.d1 {
+  top: 10px;
+  background: #00f5ff;
+  box-shadow: 0 0 20px #00f5ff;
+}
+
+.d2 {
+  right: 10px;
+  background: #8b5cf6;
+  box-shadow: 0 0 20px #8b5cf6;
+}
+
+.d3 {
+  bottom: 10px;
+  background: #ff00ff;
+  box-shadow: 0 0 20px #ff00ff;
+}
+
+.d4 {
+  left: 10px;
+  background: #00f5ff;
+  box-shadow: 0 0 20px #00f5ff;
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+@keyframes chipPulse {
+  0%,100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes flow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+.read-more{
+  width: 100% !important;
+  padding: 13px 24px;
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+  color: #ffffff;
+  border-radius: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  margin-top: 4px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform    0.25s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow   0.25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 1024px) {
+
+  .about-container{
+    flex-direction: column;
+    text-align: center;
+    margin: 2rem;
+    gap: 2rem;
+  }
+
+  .aboutus{
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .about-head{
+    font-size: 2.2rem;
+  }
+
+  .ai-chip{
+    width: 320px;
+    height: 320px;
+  }
+
+  .chip-core{
+    width: 150px;
+    height: 150px;
+  }
+
+  .chip-core span{
+    font-size: 2.5rem;
+  }
+
+  .top,
+  .bottom{
+    height: 90px;
+  }
+
+  .left,
+  .right{
+    width: 90px;
+  }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+  .about-container{
+    flex-direction: column;
+    margin: 1.5rem;
+    gap: 2rem;
+  }
+
+  .aboutus{
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .about-head{
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .para{
+    font-size: 1rem;
+    line-height: 1.8rem;
+    text-align: justify;
+  }
+
+  .ai-chip{
+    width: 280px;
+    height: 280px;
+  }
+
+  .chip-core{
+    width: 130px;
+    height: 130px;
+  }
+
+  .chip-core span{
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  .top,
+  .bottom{
+    height: 70px;
+  }
+
+  .left,
+  .right{
+    width: 70px;
+  }
+
+  .dot{
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media (max-width: 480px) {
+
+  .about-container{
+    margin: 1rem;
+  }
+
+  .about-head{
+    font-size: 1.8rem;
+  }
+
+  .para{
+    font-size: 0.95rem;
+    line-height: 1.7rem;
+  }
+
+  .ai-chip{
+    width: 230px;
+    height: 230px;
+  }
+
+  .chip-core{
+    width: 110px;
+    height: 110px;
+  }
+
+  .chip-core span{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .top,
+  .bottom{
+    height: 55px;
+  }
+
+  .left,
+  .right{
+    width: 55px;
+  }
+
+  .dot{
+    width: 10px;
+    height: 10px;
+  }
+}
+

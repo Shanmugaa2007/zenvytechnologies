@@ -1,0 +1,87 @@
+.arrow-div {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #7713be, #a855f7);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+
+  /* Smooth Effects */
+  transition: all 0.3s ease;
+
+  /* Glow + Jump Animation */
+  animation: glowJump 2s ease-in-out infinite;
+}
+
+.up-arrow {
+  color: white;
+  font-size: 20px;
+}
+
+.arrow-div:hover {
+  transform: scale(1.15);
+}
+
+/* Glow + Light Jump */
+@keyframes glowJump {
+  0% {
+    transform: translateY(0);
+    box-shadow:
+      0 0 10px #8a2be2,
+      0 0 20px #8a2be2,
+      0 0 40px #8a2be2;
+  }
+
+  25% {
+    transform: translateY(-6px);
+    box-shadow:
+      0 0 15px #a855f7,
+      0 0 30px #a855f7,
+      0 0 60px #a855f7;
+  }
+
+  50% {
+    transform: translateY(-10px);
+    box-shadow:
+      0 0 20px #c084fc,
+      0 0 40px #c084fc,
+      0 0 80px #c084fc,
+      0 0 120px #c084fc;
+  }
+
+  75% {
+    transform: translateY(-6px);
+    box-shadow:
+      0 0 15px #a855f7,
+      0 0 30px #a855f7,
+      0 0 60px #a855f7;
+  }
+
+  100% {
+    transform: translateY(0);
+    box-shadow:
+      0 0 10px #8a2be2,
+      0 0 20px #8a2be2,
+      0 0 40px #8a2be2;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .arrow-div {
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .up-arrow {
+    font-size: 20px;
+  }
+}

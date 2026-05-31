@@ -1,0 +1,154 @@
+
+.feedback-container {
+  max-width: 620px;
+  margin: 60px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+.feedback-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5b2d8b; 
+  font-size: 24px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+  border-color: #5b2d8b;
+  box-shadow: 0 0 0 2px rgba(91, 45, 139, 0.15);
+}
+
+
+.feedback-form textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+.feedback-form button {
+  margin-top: 10px;
+  padding: 12px;
+  background: #5b2d8b;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.feedback-form button:hover {
+  background: #4a2373;
+  transform: translateY(-1px);
+}
+
+.feedback-form button:active {
+  transform: scale(0.97);
+}
+
+/* Mobile Responsive*/
+@media (min-width: 320px) and (max-width: 500px){
+    
+.feedback-container {
+  transform: translateY(-100px);
+}
+}
+
+@media (min-width : 1440px) {
+    .feedback-container {
+  max-width: 720px;
+  height: max-content;
+  padding: 45px;
+}
+
+
+.feedback-container h2 {
+  margin-bottom: 24px;
+  font-size: 34px;
+}
+
+.feedback-form {
+  gap: 16px;
+}
+
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+  font-size: 16px;
+}
+
+
+.feedback-form textarea {
+  min-height: 130px;
+}
+
+.feedback-form button {
+  font-size: 18px;
+}
+}
+
+@media (min-width : 2560px){
+    
+.feedback-container {
+  max-width: 1300px;
+  height: max-content;
+}
+
+
+.feedback-container h2 {
+  margin-bottom: 40px;
+  font-size: 68px;
+}
+
+.feedback-form {
+  gap: 44px;
+}
+
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+  font-family: sans-serif;
+  padding: 21px 34px;
+  font-size: 38px;
+}
+
+.feedback-form option{
+  font-size: 16px;
+}
+
+.feedback-form textarea {
+  resize: none;
+  min-height: 280px;
+}
+
+.feedback-form button {
+  font-size: 45px;
+}
+}

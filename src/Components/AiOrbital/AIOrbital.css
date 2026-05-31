@@ -1,0 +1,178 @@
+.ai-orbital{
+  position:relative;
+  width:500px;
+  height:500px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* CENTER CORE */
+
+.core{
+  width:190px;
+  height:190px;
+
+  border-radius:50%;
+
+  background:
+  linear-gradient(
+    145deg,
+    rgba(255,255,255,.85),
+    rgba(255,255,255,.25)
+  );
+
+  backdrop-filter:blur(25px);
+
+  border:1px solid rgba(255,255,255,.4);
+
+  box-shadow:
+  0 0 40px rgba(124,58,237,.25),
+  inset 0 0 25px rgba(255,255,255,.6);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  z-index:5;
+}
+
+.core-inner{
+  font-size:4rem;
+  font-weight:800;
+
+  background:
+  linear-gradient(
+    135deg,
+    #7c3aed,
+    #a855f7,
+    #c084fc
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* RINGS */
+
+.ring{
+  position:absolute;
+
+  width:360px;
+  height:150px;
+
+  border-radius:50%;
+
+  border:4px solid rgba(124,58,237,.65);
+
+  box-shadow:
+  0 0 20px rgba(124,58,237,.35);
+
+  animation:rotateRing 10s linear infinite;
+}
+
+.ring1{
+  transform:rotate(0deg);
+}
+
+.ring2{
+  transform:rotate(60deg);
+  animation-duration:14s;
+}
+
+.ring3{
+  transform:rotate(120deg);
+  animation-duration:18s;
+}
+
+/* PARTICLES */
+
+.particle{
+  position:absolute;
+
+  top:50%;
+  left:100%;
+
+  width:18px;
+  height:18px;
+
+  transform:translate(-50%,-50%);
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    circle,
+    #ffffff,
+    #c084fc
+  );
+
+  box-shadow:
+  0 0 25px #c084fc,
+  0 0 50px #a855f7;
+}
+
+/* RING ROTATION */
+
+@keyframes rotateRing{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* FLOATING WHOLE OBJECT */
+
+.ai-orbital{
+  animation:
+  floatOrb 6s ease-in-out infinite;
+}
+
+@keyframes floatOrb{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-18px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:576px){
+
+  .ai-orbital{
+    width:280px;
+    height:280px;
+  }
+
+  .ring{
+    width:220px;
+    height:90px;
+  }
+
+  .core{
+    width:120px;
+    height:120px;
+  }
+
+  .core-inner{
+    font-size:2.5rem;
+  }
+
+  .particle{
+    width:12px;
+    height:12px;
+  }
+}

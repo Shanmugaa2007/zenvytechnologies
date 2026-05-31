@@ -1,0 +1,187 @@
+/* ==========================
+   PROJECT SECTION
+========================== */
+
+.project-section {
+
+  padding: 6rem 8%;
+
+  background:
+  linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #faf7ff 100%
+  );
+
+  position: relative;
+}
+
+/* ==========================
+   HEADING
+========================== */
+
+.project-head {
+
+  text-align: center;
+  color: #9a16ff;
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.project-head::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -12px;
+
+  transform: translateX(-50%);
+
+  width: 80px;
+  height: 3px;
+
+  border-radius: 30px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #8B5CF6,
+    #A855F7
+  );
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.cardss {
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(240px,1fr));
+
+  gap: 1.5rem;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.stat-card {
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  padding: 2rem 1rem;
+
+  text-align: center;
+
+  border:
+  1px solid rgba(139,92,246,.12);
+
+  transition: .35s ease;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.stat-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #8B5CF6,
+    #A855F7
+  );
+
+  transform: scaleX(0);
+
+  transition: .35s ease;
+}
+
+.stat-card:hover::before {
+  transform: scaleX(1);
+}
+
+.stat-card:hover {
+
+  transform: translateY(-8px);
+
+  border-color: rgba(139,92,246,.25);
+
+  box-shadow:
+  0 12px 35px rgba(139,92,246,.12);
+}
+
+/* ==========================
+   NUMBER
+========================== */
+
+.stat-card h2 {
+
+  font-size: 3rem;
+
+  font-weight: 800;
+
+  margin-bottom: .5rem;
+
+  color: #8B5CF6;
+}
+
+/* ==========================
+   TEXT
+========================== */
+
+.stat-card p {
+
+  color: #64748B;
+
+  font-size: .95rem;
+
+  font-weight: 500;
+
+  margin: 0;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+  .project-section{
+    padding:4rem 5%;
+  }
+
+  .project-head{
+    font-size:2rem;
+  }
+
+  .cardss{
+    grid-template-columns:1fr;
+  }
+
+  .stat-card h2{
+    font-size:2.5rem;
+  }
+}

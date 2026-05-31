@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.servicewebdev-page{
+  font-family:'Outfit',sans-serif;
+  background:#ffffff;
+}
+
+/* ==================================
+   HERO SECTION
+================================== */
+
+.servicewebdev-hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:120px 8%;
+
+  background:
+  linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #faf7ff 40%,
+    #f4edff 100%
+  );
+
+  position:relative;
+  overflow:hidden;
+}
+
+.servicewebdev-hero::before{
+  content:"";
+
+  position:absolute;
+
+  width:700px;
+  height:700px;
+
+  top:-250px;
+  right:-250px;
+
+  border-radius:50%;
+
+  background:
+  rgba(124,58,237,.08);
+
+  filter:blur(120px);
+}
+
+.servicewebdev-hero::after{
+  content:"";
+
+  position:absolute;
+
+  width:600px;
+  height:600px;
+
+  bottom:-250px;
+  left:-250px;
+
+  border-radius:50%;
+
+  background:
+  rgba(168,85,247,.08);
+
+  filter:blur(120px);
+}
+
+.servicehero-content{
+
+  position:relative;
+  z-index:2;
+
+  width:100%;
+  max-width:1200px;
+
+  display:flex;
+  flex-direction:column;
+
+  align-items:flex-start;
+
+  text-align:left;
+}
+
+.service-badge{
+
+  display:inline-block;
+
+  padding:12px 24px;
+
+  background:#f3ebff;
+
+  color:#7c3aed;
+
+  border-radius:50px;
+
+  font-size:.95rem;
+
+  font-weight:600;
+
+  margin-bottom:25px;
+
+  border:1px solid rgba(124,58,237,.15);
+}
+
+.servicehero-content h1{
+
+  font-size:clamp(3rem,6vw,5.8rem);
+
+  line-height:1.05;
+
+  font-weight:800;
+
+  color:#111827;
+
+  max-width:700px;
+
+  margin-bottom:25px;
+}
+
+.servicehero-content h1 span{
+
+  background:
+  linear-gradient(
+    90deg,
+    #7c3aed,
+    #a855f7
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.servicehero-content p{
+
+  max-width:650px;
+
+  font-size:1.2rem;
+
+  line-height:1.9;
+
+  color:#64748b;
+
+  margin-bottom:40px;
+}
+
+.servicehero-buttons{
+
+  display:flex;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+}
+
+/* PRIMARY BUTTON */
+
+.serviceprimary-btn{
+
+  padding:18px 36px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #7c3aed,
+    #9d5cf5
+  );
+
+  color:white;
+
+  font-size:1rem;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.35s;
+}
+
+.serviceprimary-btn:hover{
+
+  transform:translateY(-5px);
+
+  box-shadow:
+  0 15px 40px rgba(124,58,237,.25);
+}
+
+/* SECONDARY BUTTON */
+
+.servicesecondary-btn{
+
+  padding:18px 36px;
+
+  border:2px solid #7c3aed;
+
+  border-radius:14px;
+
+  background:white;
+
+  color:#7c3aed;
+
+  font-size:1rem;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.35s;
+}
+
+.servicesecondary-btn:hover{
+
+  background:#7c3aed;
+
+  color:white;
+
+  transform:translateY(-5px);
+}
+
+/* SECTION */
+
+.servicewebdev-section,
+.servicetechnology-section,
+.serviceprocess-section{
+  padding:100px 8%;
+}
+
+.servicesection-header{
+  text-align:center;
+  max-width:700px;
+  margin:auto;
+  margin-bottom:60px;
+}
+
+.servicesection-header h2{
+  font-size:2.7rem;
+  color:#111827;
+  margin-bottom:15px;
+}
+
+.servicesection-header p{
+  color:#64748b;
+  line-height:1.8;
+}
+
+/* SERVICES */
+
+.services-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.service-card{
+  background:white;
+  padding:35px;
+  border-radius:20px;
+  border:1px solid #eee;
+  transition:.4s;
+}
+
+.service-card:hover{
+  transform:translateY(-10px);
+  border-color:#7c3aed;
+  box-shadow:
+  0 20px 50px rgba(124,58,237,.12);
+}
+
+.service-card i{
+  font-size:2rem;
+  color:#7c3aed;
+  margin-bottom:20px;
+}
+
+.service-card h3{
+  margin-bottom:15px;
+  color:#111827;
+}
+
+.service-card p{
+  color:#64748b;
+  line-height:1.8;
+}
+
+/* TECH */
+
+.servicetechnology-section{
+  background:#faf7ff;
+}
+
+.servicetech-grid{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.servicetech-grid span{
+  background:white;
+  padding:14px 24px;
+  border-radius:50px;
+  border:1px solid #e5d9ff;
+  color:#7c3aed;
+  font-weight:600;
+}
+
+/* PROCESS */
+
+.serviceprocess-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+}
+
+.serviceprocess-card{
+  background:white;
+  text-align:center;
+  padding:40px;
+  border-radius:20px;
+  border:1px solid #eee;
+}
+
+.serviceprocess-card span{
+  font-size:3rem;
+  font-weight:800;
+  color:#7c3aed;
+}
+
+.serviceprocess-card h3{
+  margin-top:15px;
+  color:#111827;
+}
+
+/* CTA */
+
+.servicecta-section{
+  padding:100px 8%;
+  text-align:center;
+  background:
+  linear-gradient(
+  135deg,
+  #7c3aed,
+  #9d5cf5
+  );
+}
+
+.servicecta-section h2{
+  color:white;
+  font-size:3rem;
+  margin-bottom:20px;
+}
+
+.servicecta-section p{
+  color:rgba(255,255,255,.85);
+  margin-bottom:30px;
+}
+
+.servicecta-section button{
+  padding:16px 35px;
+  border:none;
+  border-radius:12px;
+  background:white;
+  color:#7c3aed;
+  font-size:1rem;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .servicehero-content h1{
+    font-size:2.7rem;
+  }
+
+  .servicesection-header h2{
+    font-size:2rem;
+  }
+
+  .servicecta-section h2{
+    font-size:2rem;
+  }
+}

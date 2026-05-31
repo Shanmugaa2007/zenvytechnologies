@@ -1,0 +1,82 @@
+.dm-portfolio-page {
+  background: #0a0a0a;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding-bottom: 60px;
+}
+
+/* HERO */
+.dm-hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.dm-hero h1 {
+  font-size: 3rem;
+}
+
+.dm-hero span {
+  color: #a855f7;
+}
+
+.dm-hero p {
+  max-width: 600px;
+  margin: 15px auto;
+  color: #b3b3b3;
+}
+
+/* STATS */
+.dm-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  text-align: center;
+  padding: 40px 20px;
+  background: #111;
+}
+
+.dm-stats h2 {
+  color: #a855f7;
+  font-size: 2rem;
+}
+
+/* GRID */
+.dm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 60px 40px;
+}
+
+.dm-card {
+  background: #151515;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  transition: 0.3s;
+}
+
+.dm-card:hover {
+  transform: translateY(-8px);
+  border-color: #a855f7;
+}
+
+/* CTA */
+.dm-cta {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.dm-cta button {
+  background: #a855f7;
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.dm-cta button:hover {
+  background: #7c3aed;
+}
