@@ -23,10 +23,10 @@ return (
           <h3>Our Services</h3>
           <ul>
           <li onClick={()=>{navigate('/service-webdevelopment')}}>Web Development</li>
-          <li>UI / UX Design</li>
-          <li>Graphic Design</li>
-          <li>Cloud & DevOps</li>
-          <li>Maintenance & Support</li>
+          <li onClick={()=>{navigate('/service-uiuxdesign')}}>UI / UX Design</li>
+          <li onClick={()=>{navigate('/service-graphicsdesign')}}>Graphic Design</li>
+          <li onClick={()=>{navigate('/service-digitalmarketing')}}>Digital Marketing</li>
+          <li onClick={()=>{navigate('/zenvytech-maintenance&support')}}>Maintenance & Support</li>
           </ul>
         </div>
       </div>
