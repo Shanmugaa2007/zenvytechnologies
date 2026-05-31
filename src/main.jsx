@@ -28,16 +28,8 @@ const router = createBrowserRouter([
     element : <Founders/>
   },
   {
-    path : '/login',
-    element : <Login/>
-  },
-  {
     path:'/contact-zenvyteam',
     element:<IsoContact/>
-  },
-  {
-    path : '/gotoregister/login',
-    element : <Login/>
   },
   {
     path:'/zenvytechnologies-aboutus',
