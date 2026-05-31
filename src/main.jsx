@@ -2,27 +2,22 @@ import { createRoot } from 'react-dom/client'
 import { RouterProvider,createBrowserRouter } from 'react-router-dom'
 import './index.css'
 import UserIndex from './UserIndex'
-import Founders from './Founders'
-import GotoRegister from './gotoRegister'
-import StudentRegister from './StudentRegistration'
-import UserRegistration from './otherUsersregistration'
-import Login from './Login'
-import PrivacyPolicy from './privacypolicy'
-import Certificate from './InternCertificate'
-import ProtectedRoute from './logout'
-import InternIndex from './InternIndex'
-import LearnWithUs from './learnwithus'
-import Dashboard from './InternDashboard'
-import ApplyNow from './Applynow'
-import Payment from './Payment'
-import TermsAndConditions from './terms&condition'
-import RefundPolicy from './Refund Policy'
-import SuccessPayment from './paymentsuccess'
-import StartLearning from './pdflearning'
-
+import Founders from '../src/Components/Founder/Founders'
+import VisionMission from './Components/About/Vision&Mission'
+import WebDevelopment from './Components/Service/wedevelopment'
+import ServiceDetails from './Components/Service/servicedetails'
+import RootLayout from './RootLayout'
+import Consultation from './Components/Service/Freeconsultation'
+import IsoContact from './Components/Contact/isolatedcontact'
+import WebPortfolio from './Components/Service/portfolio/webdevelopportfolio'
+import GraphicsPortfolio from './Components/Service/portfolio/GraphicsPortfolio'
+import DigitalMarketingPortfolio from './Components/Service/portfolio/DigitalMarketingPortfolio'
 
 
 const router = createBrowserRouter([
+  {
+    element: <RootLayout />,
+    children:[
   {
     path : '/',
     element :
@@ -49,60 +44,42 @@ const router = createBrowserRouter([
     element : <Login/>
   },
   {
+    path:'contact-zenvyteam',
+    element:<IsoContact/>
+  },
+  {
     path : 'gotoregister/login',
     element : <Login/>
   },
   {
-    path: 'privacypolicy',
-    element: <PrivacyPolicy/>
+    path:'zenvytechnologies-aboutus',
+    element:<VisionMission/>
   },
   {
-    path:'certificate',
-    element:<Certificate/>
+    path:'service-webdevelopment',
+    element:<WebDevelopment/>
   },
   {
-    path:'logout',
-    element:<ProtectedRoute/>
+    path:'/services/:slug',
+    element:<ServiceDetails/>
   },
   {
-    path:'internship',
-    element:<InternIndex/>
+    path:'/zenvytechnologies-freeconsultation',
+    element:<Consultation/>
   },
   {
-    path:'learnwithus',
-    element:<LearnWithUs/>
+    path:'/webdevelopment-portfolio',
+    element:<WebPortfolio/>
   },
   {
-    path:'dashboard',
-    element:<Dashboard/>
+    path:'/graphicsdesign-portfolio',
+    element:<GraphicsPortfolio/>
   },
   {
-    path:'applynow',
-    element:<ApplyNow/>
-  },
-  {
-    path:'applynow/:id',
-    element:<ApplyNow/>
-  },
-  {
-    path:'payment',
-    element:<Payment/>
-  },{
-    path:'terms&conditions',
-    element:<TermsAndConditions/>
-  },
-  {
-    path:'refundpolicy',
-    element:<RefundPolicy/>
-  },
-  {
-    path:'success-payment',
-    element:<SuccessPayment/>
-  },
-  {
-  path:'startlearn',
-  element:<StartLearning/>
+    path:'/digitalmarketing-portfolio',
+    element:<DigitalMarketingPortfolio/>
   }
+  ]}
 
 ]);
 
