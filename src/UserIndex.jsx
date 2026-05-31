@@ -1,13 +1,13 @@
-import AboutUs from "./AboutUs";
-import BackToHome from "./backtohome";
-import Contact from "./Contact";
-import FeedbackPage from "./FeedBackPage";
-import Footer from "./Footer";
-import Founders from "./Founders";
-import Home from "./Home";
-import Navbar from "./navbar";
-import Services from "./Our Services";
-import ProjectsStats from "./Projects";
+import AboutUs from "./Components/About/AboutUs";
+import BackToHome from "./Components/Backtohome/backtohome";
+import Contact from "./Components/Contact/Contact";
+import FeedbackPage from "./Components/Feedback/FeedBackPage";
+import Footer from "./Components/Footer/Footer";
+import Founders from "./Components/Founder/Founders";
+import Home from "./Components/Home/Home";
+import Navbar from "./Components/Navbar/navbar";
+import Services from "./Components/Service/Our Services";
+import ProjectsStats from "./Components/Project/Projects";
 
 function UserIndex () {
     return (
@@ -17,7 +17,6 @@ function UserIndex () {
         <AboutUs/>
         <Services/>
         <ProjectsStats/>
-        <Founders/>
         <FeedbackPage/>
         <Contact/>
         <Footer/>
