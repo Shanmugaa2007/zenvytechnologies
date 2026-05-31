@@ -1,0 +1,169 @@
+
+.certificate-container{
+  z-index: 0;
+  position: relative;
+  max-width: 500px;
+  align-items: center;
+}
+.certificate-container img{
+  width: 211%;
+  height: 100vh;
+  align-items: center;
+}
+.username{
+  z-index: 1000;
+  position: absolute;
+  top: 32%;
+  left: 87%;
+  width: max-content;
+  height: 35px;
+  border: none;
+  outline: none;
+  padding: 25px;
+  background: transparent;
+  font-size: 24px;
+  font-family: westsac;
+  text-align: center;
+  font-weight: 500;
+}
+.domain{
+  z-index: 1000;
+  position: absolute;
+  top: 40%;
+  left: 130%;
+  min-width: max-content;
+  height: 35px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 21px;
+  font-family: westsac;
+  background: transparent;
+  text-align: center;
+  font-weight: 600;
+}
+.start-date{
+  z-index: 1000;
+  width: max-content;
+  border: none;
+  outline: none;
+  background: transparent;
+  position: absolute;
+  top: 53%;
+  left: 120%;
+  font-size: 15px;
+  font-weight: 600;
+}
+.end-date{
+  z-index: 1000;
+  width: max-content;
+  border: none;
+  outline: none;
+  background: transparent;
+  position: absolute;
+  top: 53%;
+  left: 144.5%;
+  font-size: 15px;
+  font-weight: 600;
+}
+.certificate-no{
+  z-index: 1000;
+  width: max-content;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 17px;
+  position: relative;
+  bottom: 31.5px;
+  left: 730px;
+}
+
+/* Mobile Responsive*/
+@media (min-width: 320px) and (max-width: 500px){
+    
+.certificate-container{
+  z-index: 0;
+  position: relative;
+  align-items: center;
+}
+.certificate-container img{
+  align-items: center;
+  height: 10vh;
+}
+.username{
+  z-index: 1000;
+  position: absolute;
+  top: 2%;
+  left: 7%;
+  width: max-content;
+  height: 35px;
+  border: none;
+  outline: none;
+  padding: 25px;
+  background: transparent;
+  font-size: 24px;
+  font-family: westsac;
+  text-align: center;
+  font-weight: 500;
+}
+.domain{
+  z-index: 1000;
+  position: absolute;
+  top: 4%;
+  left: 5%;
+  width: max-content;
+  height: 35px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 20px;
+  font-family: westsac;
+  background: transparent;
+  text-align: center;
+  font-weight: 600;
+}
+.start-date{
+  z-index: 1000;
+  width: max-content;
+  border: none;
+  outline: none;
+  background: transparent;
+  position: absolute;
+  top: 3%;
+  left: 12%;
+  font-size: 15px;
+  font-weight: 600;
+}
+.end-date{
+  z-index: 1000;
+  width: max-content;
+  border: none;
+  outline: none;
+  background: transparent;
+  position: absolute;
+  top: 3%;
+  left: 1.5%;
+  font-size: 15px;
+  font-weight: 600;
+}
+.hide-certificate{
+  bottom: 890px;
+}
+.print-certificate{
+  width: 90%;
+}
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .certificate-container, .certificate-container * {
+    visibility: visible;
+  }
+  .certificate-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}

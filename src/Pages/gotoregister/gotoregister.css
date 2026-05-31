@@ -1,0 +1,134 @@
+
+.user-type-registration {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #6d28d9, #000000);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-type-registration::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: gridMove 35s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.user-type-registration::after {
+  content: "";
+  position: absolute;
+  inset: -100%;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: particleMove 60s linear infinite;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.selection-box {
+  position: relative;
+  z-index: 10;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+.selection-box h1 {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #eab5fd,
+    #9228d9
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Links */
+.link-option,
+.link-options {
+  display: block;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.15);
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.link-option:hover,
+.link-options:hover {
+  background: #8628d9;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-300px, -300px);
+  }
+}
+
+@keyframes particleMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(400px, 400px);
+  }
+}
+
+/* Mobile Responsive*/
+@media (min-width: 320px) and (max-width: 500px){
+    
+.user-type-registration{
+  padding: 10px;
+}
+.selection-box{
+  padding: 10px;
+  border-radius: 20px;
+}
+.selection{
+  padding-left: 10px;
+  gap: 10px;
+}
+.selection-box h1{
+  font-size: 18px;
+  padding-bottom: 5%;
+}
+.selection .link-option,.link-options{
+  padding: 8px;
+  font-size: 10px;
+}
+}
+
+@media (min-width : 2560px){
+    
+.link-options{
+  padding: 20px  50px;
+  font-size: 42px;
+}
+}
