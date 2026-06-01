@@ -19,7 +19,10 @@ function Contact() {
 
     try {
       const res = await axios.post('https://zenvytechnologiess.onrender.com/mail',
-        { name, email, message }
+        { name, email, message },
+        {
+          withCredentials:true
+        }
         );
 
 
