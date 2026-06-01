@@ -12,31 +12,37 @@ function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const res = await axios.post('https://zenvytechnologiess.onrender.com/mail',
-        { name, email, message },
-        {
-          withCredentials: true
-        }
+        { name, email, message }
         );
 
 
       if (res.data?.success) {
-        alert("Message sent successfully!");      
-        setName("");                              
-        setEmail("");                              
-        setMessage("");                            
+        setShowPopup(true);
+
+        setName("");
+        setEmail("");
+        setMessage("");
+
+        setTimeout(() => {
+          setShowPopup(false);
+        }, 3000);
       } else {
         alert("Failed to send message.");
       }
     } catch (error) {
-      console.log(error);
-      alert("Error sending message.");
-    }
+  console.log("Full Error:", error);
+  console.log("Response:", error.response);
+  console.log("Data:", error.response?.data);
+
+  alert(error.response?.data?.message || error.message);
+}
   }
 
   return (
@@ -125,6 +131,22 @@ function Contact() {
   </div>
 </div>
       </div>
+      {showPopup && (
+  <div className="success-overlay">
+    <div className="success-popup">
+      <div className="checkmark-circle">
+        <div className="checkmark"></div>
+      </div>
+
+      <h2>Message Sent!</h2>
+
+      <p>
+        Thank you for contacting Zenvy Technologies.
+        We will get back to you shortly.
+      </p>
+    </div>
+  </div>
+)}
     </div>
   );
 }
