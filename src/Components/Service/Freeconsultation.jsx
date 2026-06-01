@@ -6,6 +6,7 @@ import "./consultation.css";
 
 function Consultation() {
 
+  const [showPopup, setShowPopup] = useState(false);
   const [formData,setFormData] = useState({
     name:"",
     email:"",
@@ -22,18 +23,18 @@ function Consultation() {
   };
 
   const handleSubmit = async(e)=>{
-    e.preventDefault();
+  e.preventDefault();
 
-    try{
+  try{
 
-      const res = await axios.post(
-        "https://zenvytechnologiess.onrender.com/consultation",
-        formData
-      );
+    const res = await axios.post(
+      "https://zenvytechnologiess.onrender.com/consultation",
+      formData
+    );
 
-      alert(
-        "Consultation Request Submitted Successfully!"
-      );
+    if(res.data?.success){
+
+      setShowPopup(true);
 
       setFormData({
         name:"",
@@ -43,12 +44,18 @@ function Consultation() {
         requirement:""
       });
 
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 4000);
+
     }
-    catch(err){
-      console.log(err);
-      alert("Something went wrong");
-    }
-  };
+
+  }
+  catch(err){
+    console.log(err);
+    alert("Something went wrong");
+  }
+};
 
   return (
     <>
@@ -141,6 +148,50 @@ function Consultation() {
         </div>
 
       </div>
+      {showPopup && (
+  <div className="success-overlay">
+
+    <div className="success-popup">
+
+      <div className="success-icon">
+
+        <svg
+          viewBox="0 0 52 52"
+          className="check-svg"
+        >
+          <circle
+            className="check-circle"
+            cx="26"
+            cy="26"
+            r="25"
+            fill="none"
+          />
+
+          <path
+            className="check-path"
+            fill="none"
+            d="M14 27 L22 35 L38 18"
+          />
+        </svg>
+
+      </div>
+
+      <h2>Your Slot is Confirmed!</h2>
+
+      <p>
+        Your free consultation request has been
+        successfully submitted.
+      </p>
+
+      <p className="popup-subtext">
+        Our team will contact you shortly to
+        discuss your project requirements.
+      </p>
+
+    </div>
+
+  </div>
+)}
 
       <Footer />
     </>
