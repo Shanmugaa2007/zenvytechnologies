@@ -67,9 +67,6 @@ function ResumeSamples() {
                 entering the job market.
               </p>
 
-              <button>
-                Preview Sample
-              </button>
 
             </div>
 
@@ -91,9 +88,6 @@ function ResumeSamples() {
                 experienced professionals.
               </p>
 
-              <button>
-                Preview Sample
-              </button>
 
             </div>
 
@@ -115,9 +109,6 @@ function ResumeSamples() {
                 skills and achievements.
               </p>
 
-              <button>
-                Preview Sample
-              </button>
 
             </div>
 
@@ -176,7 +167,7 @@ function ResumeSamples() {
       <section className="resume-stats-section">
 
         <div className="resume-stat-card">
-          <h2>1000+</h2>
+          <h2>20+</h2>
           <p>Resumes Built</p>
         </div>
 
@@ -186,7 +177,7 @@ function ResumeSamples() {
         </div>
 
         <div className="resume-stat-card">
-          <h2>500+</h2>
+          <h2>15+</h2>
           <p>Students Helped</p>
         </div>
 
