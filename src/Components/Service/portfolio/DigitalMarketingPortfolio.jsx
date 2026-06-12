@@ -63,7 +63,6 @@ function DigitalMarketingPortfolio() {
                 search engine rankings for a growing business.
               </p>
 
-              <button>View Campaign</button>
             </div>
           </div>
 
@@ -81,7 +80,6 @@ function DigitalMarketingPortfolio() {
                 content and targeted audience campaigns.
               </p>
 
-              <button>View Campaign</button>
             </div>
           </div>
 
@@ -99,7 +97,6 @@ function DigitalMarketingPortfolio() {
                 through optimized PPC advertising.
               </p>
 
-              <button>View Campaign</button>
             </div>
           </div>
 
@@ -156,12 +153,12 @@ function DigitalMarketingPortfolio() {
       <section className="zen-dm-stats-section">
 
         <div className="zen-dm-stat-card">
-          <h2>300+</h2>
+          <h2>3+</h2>
           <p>Campaigns Managed</p>
         </div>
 
         <div className="zen-dm-stat-card">
-          <h2>1M+</h2>
+          <h2>1+</h2>
           <p>Audience Reached</p>
         </div>
 
