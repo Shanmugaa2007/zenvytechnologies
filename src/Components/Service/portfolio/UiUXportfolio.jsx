@@ -118,17 +118,17 @@ function UIUXPortfolio() {
         <section className="uiportfolio-stats">
 
           <div className="uiportfolio-stat">
-            <h2>100+</h2>
+            <h2>2+</h2>
             <p>UI Projects</p>
           </div>
 
           <div className="uiportfolio-stat">
-            <h2>98%</h2>
+            <h2>92%</h2>
             <p>Client Satisfaction</p>
           </div>
 
           <div className="uiportfolio-stat">
-            <h2>50+</h2>
+            <h2>1+</h2>
             <p>Brands Worked</p>
           </div>
 
