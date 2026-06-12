@@ -23,6 +23,7 @@ import UIDesign from './Components/Service/Ui&Uxdesign'
 import GraphicsDesign from './Components/Service/graphicsdesign'
 import DigitalMarketing from './Components/Service/digitalmarketing'
 import MaintenanceSupport from './Components/Maintenance&Support/Maintenance&support'
+import SoftwarePortfolio from './Components/Service/portfolio/SoftwarePortfolio'
 
 
 const router = createBrowserRouter([
@@ -117,6 +118,10 @@ const router = createBrowserRouter([
   {
     path:'/uiuxportfolio',
     element:<UIUXPortfolio/>
+  },
+  {
+    path:'/softwaredevelopment-portfolio',
+    element:<SoftwarePortfolio/>
   }
   ]}
 
