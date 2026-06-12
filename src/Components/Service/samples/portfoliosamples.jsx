@@ -52,7 +52,6 @@ function PortfolioSamples() {
                 projects, skills and experience.
               </p>
 
-              <button>Preview</button>
             </div>
           </div>
 
@@ -70,7 +69,6 @@ function PortfolioSamples() {
                 presentation for designers.
               </p>
 
-              <button>Preview</button>
             </div>
           </div>
 
@@ -88,7 +86,6 @@ function PortfolioSamples() {
                 portfolio design.
               </p>
 
-              <button>Preview</button>
             </div>
           </div>
 
@@ -99,17 +96,17 @@ function PortfolioSamples() {
       <section className="ps-stats">
 
         <div className="ps-stat-card">
-          <h2>500+</h2>
+          <h2>5+</h2>
           <p>Portfolios Created</p>
         </div>
 
         <div className="ps-stat-card">
-          <h2>98%</h2>
+          <h2>99%</h2>
           <p>Success Rate</p>
         </div>
 
         <div className="ps-stat-card">
-          <h2>300+</h2>
+          <h2>30+</h2>
           <p>Resume Designs</p>
         </div>
 
