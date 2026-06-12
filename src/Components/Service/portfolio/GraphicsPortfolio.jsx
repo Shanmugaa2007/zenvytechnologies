@@ -60,7 +60,6 @@ function GraphicsPortfolio() {
                 for modern startups.
               </p>
 
-              <button>View Project</button>
             </div>
           </div>
 
@@ -78,7 +77,6 @@ function GraphicsPortfolio() {
                 designs for businesses.
               </p>
 
-              <button>View Project</button>
             </div>
           </div>
 
@@ -96,7 +94,6 @@ function GraphicsPortfolio() {
                 advertisements for campaigns.
               </p>
 
-              <button>View Project</button>
             </div>
           </div>
 
@@ -153,12 +150,12 @@ function GraphicsPortfolio() {
       <section className="graphics-stats">
 
         <div className="graphics-stat-card">
-          <h2>200+</h2>
+          <h2>11+</h2>
           <p>Design Projects</p>
         </div>
 
         <div className="graphics-stat-card">
-          <h2>100+</h2>
+          <h2>10+</h2>
           <p>Happy Clients</p>
         </div>
 
