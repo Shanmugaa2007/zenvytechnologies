@@ -74,7 +74,6 @@ function WebPortfolio() {
                 payment integration and admin dashboard.
               </p>
 
-              <button>View Details</button>
             </div>
           </div>
 
@@ -92,7 +91,6 @@ function WebPortfolio() {
                 with modern UI and automation.
               </p>
 
-              <button>View Details</button>
             </div>
           </div>
 
@@ -110,7 +108,6 @@ function WebPortfolio() {
                 built for brand growth.
               </p>
 
-              <button>View Details</button>
             </div>
           </div>
 
@@ -144,7 +141,7 @@ function WebPortfolio() {
       <section className="portfolio-stats">
 
         <div className="stat-card">
-          <h2>50+</h2>
+          <h2>10+</h2>
           <p>Projects Delivered</p>
         </div>
 
